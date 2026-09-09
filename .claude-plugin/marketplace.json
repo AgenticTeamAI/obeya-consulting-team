@@ -1,0 +1,18 @@
+{
+  "name": "obeya-consulting-team",
+  "description": "Het Obeya Consulting Team als Claude-plugin: elf rollen die samen een Obeya lezen, toetsen en herontwerpen — playbooks altijd actueel via de beveiligde connector.",
+  "owner": {
+    "name": "Obeya Insights",
+    "email": "support@obeya-insights.com"
+  },
+  "plugins": [
+    {
+      "name": "obeya-consulting-team",
+      "source": "./plugins/obeya-consulting-team",
+      "description": "Het Obeya Consulting Team: 11 rollen die samen een Obeya lezen, toetsen en herontwerpen. De playbooks worden per fase opgehaald via de beveiligde connector; deze plugin bevat alleen de menukaart.",
+      "author": {
+        "name": "Obeya Insights"
+      }
+    }
+  ]
+}
