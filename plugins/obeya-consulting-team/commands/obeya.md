@@ -13,3 +13,6 @@ Start a session with the Obeya Consulting Team.
 
 One call gives one phase of one role. Build the session up rather than pulling
 everything down first.
+
+When a review reaches the readings, use `/obeya-lezingen` to run them side by
+side instead of one after the other.
