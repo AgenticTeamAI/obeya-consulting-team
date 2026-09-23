@@ -14,15 +14,16 @@ connector, so they are always current — no methodology lives in this repo.
    and enter `AgenticTeamAI/obeya-consulting-team`. Make sure *Sync automatically* is
    on, so updates reach you. In **Claude Code:**
    `/plugin marketplace add AgenticTeamAI/obeya-consulting-team`.
-2. **Install obeya-consulting-team.** Then open **Connectors** in the plugin and click
-   *Install* next to `obeya`. The address is already filled in:
+2. **Install Obeya Insights Consulting Team.** Then open **Connectors** in the plugin and click
+   *Install* next to `Obeya-Insights-Consulting-Team`. The address is already filled in:
 
    ```
    https://connector.obeya-insights.com/mcp
    ```
 
    You can also add it by hand: Settings → Connectors → Add custom connector,
-   with the same address. It is the same for everyone and contains no secret.
+   with **Name:** `Obeya Insights Consulting Team` and the same address.
+   The address is the same for everyone and contains no secret.
 3. **Connect, and sign in with the email address you were invited on.** Enter
    it and press **Continue**. You'll see *"Check your email"*, and an email
    arrives with a sign-in link and an eight-digit code. There is no key to

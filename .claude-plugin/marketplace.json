@@ -8,6 +8,7 @@
   "plugins": [
     {
       "name": "obeya-consulting-team",
+      "displayName": "Obeya Insights Consulting Team",
       "source": "./plugins/obeya-consulting-team",
       "description": "The Obeya Insights Consulting Team: 11 roles that read, test and redesign an Obeya together. The playbooks are fetched per phase through the secured connector; this plugin contains only the menu.",
       "author": {

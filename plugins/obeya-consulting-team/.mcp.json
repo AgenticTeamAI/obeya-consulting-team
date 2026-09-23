@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "obeya": {
+    "Obeya-Insights-Consulting-Team": {
       "type": "http",
       "url": "https://connector.obeya-insights.com/mcp"
     }
