@@ -28,7 +28,15 @@ isn't listed there, it doesn't belong here.
 
 Thresholds, methodology, client data, licence keys. The generator runs the same
 menu guard as the other product — the same patterns, the same 8 KB limit per
-skill — plus a check for the `obk_` key prefix. If that fails, there is no
-build.
+skill — plus checks of its own for this product: the `obk_` key prefix,
+threshold expressions, references to internal source material, playbook
+section headings and text from the licensed Maturity Scan. If that fails, there
+is no build.
+
+On every push and pull request, `scripts/check_zero_ip.py` checks this repo
+again, independently of the generator and without access to it: every file is
+either listed in `plugin-manifest.json` with a matching hash or is one of a
+handful of repo files, and no file — including this README — may contain any of
+the above.
 
 Support: [support@obeya-insights.com](mailto:support@obeya-insights.com)
