@@ -1,4 +1,4 @@
-# Obeya Consulting Team — Claude plugin
+# Obeya Insights Consulting Team — Claude plugin
 
 Eleven roles that read, test and redesign an Obeya together, as a plugin for
 Claude. **This repo contains only the menu**: which roles exist and what each

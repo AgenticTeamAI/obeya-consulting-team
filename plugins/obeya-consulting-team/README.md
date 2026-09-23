@@ -1,4 +1,4 @@
-# Obeya Consulting Team
+# Obeya Insights Consulting Team
 
 *Eleven roles that read, test and redesign an Obeya. Requires an
 [Obeya Insights](https://obeya-insights.com) licence.*

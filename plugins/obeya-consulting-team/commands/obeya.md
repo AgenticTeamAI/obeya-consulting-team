@@ -1,9 +1,9 @@
 ---
 name: "obeya"
-description: "Start een sessie met je Obeya Consulting Team — een review, een diagnose, of een vraag over de kamer. Gebruik bij \"/obeya\"."
+description: "Start a session with your Obeya Insights Consulting Team — a review, a diagnosis, or a question about the room. Use with \"/obeya\"."
 ---
 
-Start a session with the Obeya Consulting Team.
+Start a session with the Obeya Insights Consulting Team.
 
 1. Call `check_license` — one cheap call that returns all 11 roles
    with the phases each of them has.
