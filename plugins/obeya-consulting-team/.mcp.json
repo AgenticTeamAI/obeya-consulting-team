@@ -2,7 +2,7 @@
   "mcpServers": {
     "obeya": {
       "type": "http",
-      "url": "https://connector.obeya-insights.com/api/mcp/k/PLAK-HIER-JE-SLEUTEL/mcp"
+      "url": "https://connector.obeya-insights.com/mcp"
     }
   }
 }

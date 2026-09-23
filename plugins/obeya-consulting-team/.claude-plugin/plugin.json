@@ -1,6 +1,6 @@
 {
   "name": "obeya-consulting-team",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Het Obeya Consulting Team: 11 rollen die samen een Obeya lezen, toetsen en herontwerpen. De playbooks worden per fase opgehaald via de beveiligde connector; deze plugin bevat alleen de menukaart.",
   "author": {
     "name": "Obeya Insights",

@@ -1,34 +1,34 @@
-# Obeya Consulting Team — Claude-plugin
+# Obeya Consulting Team — Claude plugin
 
-Elf rollen die samen een Obeya lezen, toetsen en herontwerpen, als plugin voor
-Claude. **Deze repo bevat alleen de menukaart**: welke rollen er zijn en waar ze
-voor zijn. De playbooks zelf worden per fase opgehaald via de beveiligde
-connector op `connector.obeya-insights.com` — er staat geen methodiek in deze
-repo, en dat is met een guard afgedwongen.
+Eleven roles that read, test and redesign an Obeya together, as a plugin for
+Claude. **This repo contains only the menu**: which roles exist and what each
+one is for. The playbooks themselves are fetched per phase through the secured
+connector at `connector.obeya-insights.com` — no methodology lives in this
+repo, and a guard enforces that.
 
-Installeren en koppelen: zie [de plugin-README](plugins/obeya-consulting-team/README.md).
+To install and connect: see [the plugin README](plugins/obeya-consulting-team/README.md).
 
-## Naast het Agentic Team
+## Alongside Agentic Team
 
-Deze plugin kan náást `agentic-team` staan. Er botst niets: de marketplace heet
-anders, de plugin heet anders, alle rolnamen beginnen met `obeya-`, en het
-commando is `/obeya` in plaats van `/chief` of `/gids`.
+This plugin can sit next to `agentic-team`. Nothing clashes: the marketplace
+has a different name, the plugin has a different name, every role name starts
+with `obeya-`, and the command is `/obeya` rather than `/chief` or `/gids`.
 
-## Gegenereerd, niet met de hand geschreven
+## Generated, not written by hand
 
-Alles hier komt uit `installer/build_obeya_plugin.py` in
-[agent-architecture](https://github.com/AgenticTeamAI/agent-architecture), uit de
-registry van [Obeya-Team-Pack](https://github.com/AgenticTeamAI/Obeya-Team-Pack).
-Zelfde registry in, byte-identieke output uit.
+Everything here comes from `installer/build_obeya_plugin.py` in
+[agent-architecture](https://github.com/AgenticTeamAI/agent-architecture), from
+the registry in [Obeya-Team-Pack](https://github.com/AgenticTeamAI/Obeya-Team-Pack).
+Same registry in, byte-identical output out.
 
-`plugin-manifest.json` is de allowlist: elk bestand met zijn sha256. Staat een
-bestand daar niet in, dan hoort het hier niet.
+`plugin-manifest.json` is the allowlist: every file with its sha256. If a file
+isn't listed there, it doesn't belong here.
 
-## Wat er nooit in mag
+## What must never be in here
 
-Drempelwaarden, methodiek, klantdata, licentiesleutels. De generator draait
-dezelfde menukaart-guard als het andere product — dezelfde patronen, dezelfde
-8 KB-limiet per skill — plus een controle op de `obk_`-sleutelprefix. Faalt die,
-dan komt er geen build.
+Thresholds, methodology, client data, licence keys. The generator runs the same
+menu guard as the other product — the same patterns, the same 8 KB limit per
+skill — plus a check for the `obk_` key prefix. If that fails, there is no
+build.
 
 Support: [support@obeya-insights.com](mailto:support@obeya-insights.com)

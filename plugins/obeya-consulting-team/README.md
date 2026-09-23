@@ -3,40 +3,64 @@
 *Eleven roles that read, test and redesign an Obeya. Requires an
 [Obeya Insights](https://obeya-insights.com) licence.*
 
-Deze plugin bevat de **menukaart** van het team: welke rollen er zijn en waar ze
-voor zijn. De playbooks zelf worden per fase opgehaald via de beveiligde
-connector, dus ze zijn altijd actueel — er staat geen methodiek in deze repo.
+This plugin contains the team's **menu**: which roles exist and what each one
+is for. The playbooks themselves are fetched per phase through the secured
+connector, so they are always current — no methodology lives in this repo.
 
-## Installeren
+## Install
 
-1. Voeg de marketplace toe — **claude.ai / desktop / Cowork:** Settings →
-   Plugins → Add → *Add marketplace* → *Add from a repository*:
-   `AgenticTeamAI/obeya-consulting-team` · **Claude Code:**
+1. **Add the marketplace.** In **claude.ai, the desktop app or Cowork:**
+   Settings → Plugins → Add → *Add marketplace* → *Add from a repository*,
+   and enter `AgenticTeamAI/obeya-consulting-team`. Make sure *Sync automatically* is
+   on, so updates reach you. In **Claude Code:**
    `/plugin marketplace add AgenticTeamAI/obeya-consulting-team`.
-2. Installeer **obeya-consulting-team**.
-3. **Zet je eigen licentiesleutel in het connector-adres.** Dit product kent nog
-   geen inlog op e-mailadres, dus de sleutel zit in de URL. Vervang
-   `PLAK-HIER-JE-SLEUTEL` door je eigen sleutel:
+2. **Install obeya-consulting-team.** Then open **Connectors** in the plugin and click
+   *Install* next to `obeya`. The address is already filled in:
 
    ```
-   https://connector.obeya-insights.com/api/mcp/k/PLAK-HIER-JE-SLEUTEL/mcp
+   https://connector.obeya-insights.com/mcp
    ```
 
-   Je sleutel krijg je één keer van Obeya Insights. Die URL ís het geheim —
-   niet doorsturen, niet in een screenshot. Kwijt? Dan krijg je een nieuwe en
-   vervalt de oude.
+   You can also add it by hand: Settings → Connectors → Add custom connector,
+   with the same address. It is the same for everyone and contains no secret.
+3. **Connect, and sign in with the email address you were invited on.** Enter
+   it and press **Continue**. You'll see *"Check your email"*, and an email
+   arrives with a sign-in link and an eight-digit code. There is no key to
+   keep and nothing to paste.
+4. **Open the link in the same browser you started in.** You'll see
+   *"Confirm it's you"*. Press **Continue**, and you're in.
 
-## Naast het Agentic Team
+   If your mail app opens the link in a different browser — Outlook opening
+   Edge while you work in Chrome, or the email on your phone — you'll see
+   *"Open this in your original browser"* and nothing else happens. That isn't
+   a fault, and nothing is used up: go back to the *"Check your email"* page in
+   the browser where you started, and type the code from the email there.
 
-Deze plugin kan gewoon náást `agentic-team` staan. De rolnamen beginnen allemaal
-met `obeya-`, de marketplace heet anders en de commando's botsen niet: dit team
-luistert naar `/obeya`.
+### Stuck?
 
-## Wat er in deze repo staat
+Two screens look like waiting, but aren't:
 
-Alleen de menukaart: rolnamen, emoji, publieke omschrijvingen en de instructie
-om het playbook op te halen. Geen drempelwaarden, geen methodiek, geen
-klantdata. Een gegenereerd manifest (plugin-manifest.json) legt vast welke bestanden
-erbij horen; alles daarbuiten hoort er niet te zijn.
+- **"Check your email", but nothing arrives.** That screen always says the same
+  thing, including when your address hasn't been invited yet — on purpose, so
+  nobody can use it to find out who is a customer. If the email doesn't come,
+  that is almost always why. Email [support@obeya-insights.com](mailto:support@obeya-insights.com) rather than
+  trying again.
+- **"Not ready yet".** Signing in only works when a workspace of your own is
+  attached to your licence. If there isn't one, the screen's advice to try
+  again in a moment won't help — this doesn't resolve by itself. Email
+  [support@obeya-insights.com](mailto:support@obeya-insights.com) here too.
+
+## Alongside Agentic Team
+
+This plugin can sit right next to `agentic-team`. Every role name starts with
+`obeya-`, the marketplace has a different name, and the commands don't clash:
+this team answers to `/obeya`.
+
+## What's in this repo
+
+Only the menu: role names, emoji, public descriptions and the instruction to
+fetch the playbook. No thresholds, no methodology, no client data. A generated
+manifest (plugin-manifest.json) records which files the plugin itself contains; nothing
+under `plugins/` or `.claude-plugin/` should appear that isn't listed there.
 
 Support: [support@obeya-insights.com](mailto:support@obeya-insights.com)
