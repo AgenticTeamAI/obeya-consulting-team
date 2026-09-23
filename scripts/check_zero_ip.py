@@ -153,6 +153,38 @@ THRESHOLD_FORMS = (
     ),
 )
 
+# Thresholds the forms above miss. They are a literal port of the counter on
+# the server side, and that counter does not see "meer dan" (only "more than"),
+# colours other than the compound "categoriekleuren", handoffs, "max." with a
+# full stop, or a number that comes after its subject. Each of these occurs in
+# the served playbooks, so each is a way to publish a threshold here without
+# tripping the forms above. Same strings as EXTRA_DREMPELVORMEN in the
+# generator (agent-architecture installer/obeya_nul_ip.py).
+_STRONG_QUANTIFIER = (
+    "(?:maximaal|maximum|max|ten hoogste|hoogstens|hooguit|no more than|more than|meer dan|"
+    "at most|minimaal|minimum|ten minste|minstens|at least|no fewer than|fewer than|less than|"
+    "minder dan)"
+)
+_ALL_QUANTIFIERS = (
+    f"(?:\\b(?:{_QUANTIFIER[3:-1]}|meer dan|minder dan|fewer than|less than|hooguit|minstens|"
+    "of minder|or fewer|or less)\\b|\\b(?:max|min)\\.|≤|≥|<=|>=)"
+)
+_ALL_STRONG_QUANTIFIERS = f"(?:\\b{_STRONG_QUANTIFIER}\\b|\\b(?:max|min)\\.|≤|≥|<=|>=)"
+_RANGE = "(?<![\\w.,-])\\d{1,2}\\s*(?:±|[-–])\\s*\\d{1,3}(?![\\w.,])"
+_ALL_NUMBERS = f"(?:\\b{_NUMBER}\\b|\\b(?:elf|twaalf|eleven|twelve)\\b|{_RANGE})"
+_ALL_SUBJECTS = (
+    f"\\b(?:{_SUBJECT[3:-1]}|overdrachten|handoffs?|hand-offs?|kleuren|colou?rs|"
+    "lettertypen|fonts?|KPI'?s)\\b"
+)
+THRESHOLD_FORMS += (
+    re.compile(f"{_ALL_QUANTIFIERS}{_WINDOW}{_ALL_NUMBERS}{_WINDOW}{_ALL_SUBJECTS}", _FLAGS),
+    re.compile(f"{_ALL_NUMBERS}{_WINDOW}{_ALL_SUBJECTS}{_WINDOW}{_ALL_QUANTIFIERS}", _FLAGS),
+    re.compile(f"{_ALL_STRONG_QUANTIFIERS}{_WINDOW}{_ALL_SUBJECTS}{_WINDOW}{_ALL_NUMBERS}", _FLAGS),
+    re.compile(f"{_ALL_SUBJECTS}{_WINDOW}{_ALL_STRONG_QUANTIFIERS}{_WINDOW}{_ALL_NUMBERS}", _FLAGS),
+    re.compile("(?<!\\w)\\d{1,2}\\s*±\\s*\\d{1,2}(?!\\w)", _FLAGS),
+    re.compile(f"{_RANGE}{_WINDOW}{_ALL_SUBJECTS}", _FLAGS),
+)
+
 # Menu skills are small; anything bigger is suspect.
 MAX_SKILL_BYTES = 8192
 
