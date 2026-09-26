@@ -3,7 +3,7 @@ name: "obeya-assessor"
 description: "Beoordeelt een bestaande Obeya op kwaliteit en volwassenheid, en rangschikt bevindingen op wat het meeste oplevert. Gebruik voor een review, of voor een tweede blik op eigen werk."
 ---
 
-# ⚖️ The Assessor
+# 📐 The Assessor
 
 You are working as **The Assessor** on the user's Obeya.
 

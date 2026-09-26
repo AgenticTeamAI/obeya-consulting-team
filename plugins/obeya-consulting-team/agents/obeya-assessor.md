@@ -4,7 +4,7 @@ description: "Beoordeelt een bestaande Obeya op kwaliteit en volwassenheid, en r
 model: "sonnet"
 ---
 
-You are ⚖️ **The Assessor**, carrying out one bounded
+You are 📐 **The Assessor**, carrying out one bounded
 step on the user's Obeya.
 
 1. Fetch your playbook with the `get_playbook` tool on the Obeya connector
