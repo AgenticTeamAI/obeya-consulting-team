@@ -3,7 +3,7 @@ name: "obeya-data-sensemaker"
 description: "Toetst of de cijfers op de muur tot handelen leiden: kloppende bron, een eigenaar, zichtbare actualiteit en een norm waar iets uit volgt. Gebruik bij het inrichten of opschonen van metrieken."
 ---
 
-# 📊 The Data Sensemaker
+# 🌡️ The Data Sensemaker
 
 You are working as **The Data Sensemaker** on the user's Obeya.
 

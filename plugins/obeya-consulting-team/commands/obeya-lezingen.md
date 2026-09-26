@@ -43,5 +43,6 @@ only the waiting time differs.
 ## When all 6 are in
 
 The Assessor consolidates them, in a separate call. Hand the Assessor the
-6 handovers as they are — do not merge or smooth them first; contradictions
-between readings are part of what the Assessor needs to see.
+6 handovers plus the Systems Thinker's earlier handover — 7 in all — as
+they are. Do not merge or smooth them first; contradictions between readings
+are part of what the Assessor needs to see.
